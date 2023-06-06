@@ -12,8 +12,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        txtScore.GetComponent<TextMeshProUGUI>().text = "Kills: ";
-        txtLife.GetComponent<TextMeshProUGUI>().text = "Life: ";
+
     }
 
     public void SetPoints(int newPoints)

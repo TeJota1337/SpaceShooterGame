@@ -37,7 +37,7 @@ public class PlayerMove : MonoBehaviour
         playerPosViewport.Set(playerPosViewport.x, 0f, playerPosViewport.y);
 
         // para testes, pode remover quando não for mais relevante
-        Debug.Log("Mouse: " + mousePosViewport + " / Player: " + playerPosViewport);
+        //Debug.Log("Mouse: " + mousePosViewport + " / Player: " + playerPosViewport);
 
         // aplica a rotação de fato, utilizando apenas a direção entre os dois vetores resultantes
         this.transform.forward = (mousePosViewport - playerPosViewport).normalized;

@@ -20,6 +20,7 @@ public class DestroyEnemy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("ammo"))
         {
+            FindObjectOfType<HudScript>().UpdateKills();
             Destroy(gameObject);
         }
     }

@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - ammo
+  - enemies
+  - player
   layers:
   - Default
   - TransparentFX

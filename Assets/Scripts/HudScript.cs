@@ -8,7 +8,10 @@ public class HudScript : MonoBehaviour
 {
     public TMP_Text Life;
     public TMP_Text Kills;
+<<<<<<< Updated upstream
     public int kills;
+=======
+>>>>>>> Stashed changes
 
     // Start is called before the first frame update
     void Start()
@@ -27,10 +30,16 @@ public class HudScript : MonoBehaviour
         Life.text = "Life: " + valor;
     }
 
+<<<<<<< Updated upstream
     public void UpdateKills()
     {
         kills++;
         Kills.text = "Kills: " + kills;
+=======
+    public void UpdateKills(int valor)
+    {
+        Kills.text = "Kills: " + valor;
+>>>>>>> Stashed changes
     }
 }
 

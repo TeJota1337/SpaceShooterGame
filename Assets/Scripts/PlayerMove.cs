@@ -8,7 +8,9 @@ public class PlayerMove : MonoBehaviour
     public float speed = 5f; // velocidade do player
     public Camera mainCam;
     public Camera gameCam;
-    public float life = 100;
+
+    public int vidaInicial = 100; // Vida inicial do jogador
+    private int vidaAtual; // Vida atual do jogador
 
     private Rigidbody rigid;
 
@@ -17,6 +19,8 @@ public class PlayerMove : MonoBehaviour
     private void Start()
     {
         rigid = GetComponent<Rigidbody>();
+
+        vidaAtual = vidaInicial; // Inicializa a vida atual com o valor inicial
     }
 
     private void Update()
@@ -57,6 +61,18 @@ public class PlayerMove : MonoBehaviour
             Vector3 newPosition = transform.position;
             newPosition.y = 25;
             transform.position = newPosition;
+        }
+    }
+
+    public void DiminuirVida(int pontos)
+    {
+        vidaAtual -= pontos;
+        FindObjectOfType<HudScript>().UpdateLife(vidaAtual);
+
+        if (vidaAtual <= 0)
+        {
+            // Verifica se a vida do jogador chegou a zero ou menos
+            // Implemente aqui a lógica para quando o jogador morrer
         }
     }
 }

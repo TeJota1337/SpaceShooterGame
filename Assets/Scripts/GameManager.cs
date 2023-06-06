@@ -5,13 +5,11 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField]
-    public GameObject txtLife, txtScore;
-    int life, score;
+    int kills;
 
-    // Start is called before the first frame update
-    void Start()
+    public void EnemyKilled()
     {
+<<<<<<< Updated upstream
 
     }
 
@@ -30,5 +28,9 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+=======
+        kills++;
+        FindObjectOfType<HudScript>().UpdateKills(kills);
+>>>>>>> Stashed changes
     }
 }

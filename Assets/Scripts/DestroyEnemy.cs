@@ -13,14 +13,18 @@ public class DestroyEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("ammo"))
         {
+<<<<<<< Updated upstream
             FindObjectOfType<HudScript>().UpdateKills();
+=======
+            FindObjectOfType<GameManager>().EnemyKilled();
+>>>>>>> Stashed changes
             Destroy(gameObject);
         }
     }

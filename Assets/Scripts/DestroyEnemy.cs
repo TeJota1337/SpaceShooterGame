@@ -20,11 +20,7 @@ public class DestroyEnemy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("ammo"))
         {
-<<<<<<< Updated upstream
             FindObjectOfType<HudScript>().UpdateKills();
-=======
-            FindObjectOfType<GameManager>().EnemyKilled();
->>>>>>> Stashed changes
             Destroy(gameObject);
         }
     }
